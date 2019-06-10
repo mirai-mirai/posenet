@@ -11,7 +11,7 @@ script.addEventListener("load", function () {
     const stats = new Stats();
     const contentWidth = 800;
     const contentHeight = 600;
-    const scoreThreshold = 0.4;
+    const scoreThreshold = 0.3;
     const keptThisIsIt = 10;
 
     bindPage();
@@ -62,6 +62,7 @@ script.addEventListener("load", function () {
     var keptPose = 5;
     var arrMarkPos = [];
     var tmpMarkPos = [];
+    var flgHandsUp = false;
 
     function detectPoseInRealTime(video, net) {
         const canvas = document.getElementById('canvas');
@@ -102,6 +103,11 @@ script.addEventListener("load", function () {
                 });
 
                 if (isHandsUp(namePos)) {
+                    if (!flgHandsUp) {
+                        flgHandsUp = true;
+                        tmpMarkPos = [];
+                        arrMarkPos = [];
+                    }
                     let p = namePos['rightWrist'];
                     dist = calcDist(p, oldPos);
                     if (dist < 100) {
@@ -117,8 +123,7 @@ script.addEventListener("load", function () {
                     oldPos = p;
                     drawLines(arrMarkPos, ctx);
                 } else {
-                    tmpMarkPos = [];
-                    arrMarkPos = [];
+                    flgHandsUp = false;
                 }
 
                 radius = radius > 0 ? radius - 5 : 30;
