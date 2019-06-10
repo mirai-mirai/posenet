@@ -1,0 +1,14 @@
+audio {
+    display: none;
+}
+
+#status {
+    position: absolute;
+    right: 30px;
+}
+
+#count {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
