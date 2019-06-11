@@ -1,1 +1,42 @@
+<html>
 
+<head>
+    <script src="../jquery.min.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/posenet"></script>
+    <script src="../tf.min.js"></script>
+    <script src="../posenet.min.js"></script>
+    <script src="posenet_sample.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+    <video id="video" width="800px" height="600px" autoplay="1" style="position:absolute;"></video>
+    <canvas id="canvas" width="800px" height="600px" style="position:absolute;"></canvas>
+    <div id="status"></div>
+    <div id="score"></div>
+
+    <div id="nose"></div>
+    <div id="leftEye"></div>
+    <div id="rightEye"></div>
+    <div id="leftEar"></div>
+    <div id="rightEar"></div>
+    <div id="leftShoulder"></div>
+    <div id="rightShoulder"></div>
+    <div id="leftElbow"></div>
+    <div id="rightElbow"></div>
+    <div id="leftWrist"></div>
+    <div id="rightWrist"></div>
+    <div id="leftHip"></div>
+    <div id="rightHip"></div>
+    <div id="leftKnee"></div>
+    <div id="rightKnee"></div>
+    <div id="leftAnkle"></div>
+    <div id="rightAnkle"></div>
+
+    <div id="json">json data</div>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+audio {
+    display: none;
+}
+
+#status {
+    position: absolute;
+    right: 30px;
+}
+
+#score {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+#nose {
+    position: absolute;
+    right: 30px;
+    top: 60px;
+}
+
+#leftEye {
+    position: absolute;
+    right: 30px;
+    top: 90px;
+}
+
+#rightEye {
+    position: absolute;
+    right: 30px;
+    top: 120px;
+}
+
+#leftEar {
+    position: absolute;
+    right: 30px;
+    top: 150px;
+}
+
+#rightEar {
+    position: absolute;
+    right: 30px;
+    top: 180px;
+}
+
+#leftShoulder {
+    position: absolute;
+    right: 30px;
+    top: 210px;
+}
+
+#rightShoulder {
+    position: absolute;
+    right: 30px;
+    top: 240px;
+}
+
+#leftElbow {
+    position: absolute;
+    right: 30px;
+    top: 270px;
+}
+
+#rightElbow {
+    position: absolute;
+    right: 30px;
+    top: 300px;
+}
+
+#leftWrist {
+    position: absolute;
+    right: 30px;
+    top: 330px;
+}
+
+#rightWrist {
+    position: absolute;
+    right: 30px;
+    top: 360px;
+}
+
+#leftHip {
+    position: absolute;
+    right: 30px;
+    top: 390px;
+}
+
+#rightHip {
+    position: absolute;
+    right: 30px;
+    top: 420px;
+}
+
+#leftKnee {
+    position: absolute;
+    right: 30px;
+    top: 450px;
+}
+
+#rightKnee {
+    position: absolute;
+    right: 30px;
+    top: 480px;
+}
+
+#leftAnkle {
+    position: absolute;
+    right: 30px;
+    top: 510px;
+}
+
+#rightAnkle {
+    position: absolute;
+    right: 30px;
+    top: 540px;
+}
+
+#json {
+    position: absolute;
+    left: 30px;
+    top: 700px;
+    width: 95%;
+    height: :auto;
+}
