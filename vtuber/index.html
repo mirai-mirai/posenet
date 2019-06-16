@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PoseNet - Camera Feed Demo</title>
+    <style>
+        @media only screen and (max-width: 600px) {
+
+            .footer-text,
+            .dg {
+                display: none;
+            }
+        }
+
+        /*
+         *  The following loading spinner CSS is from SpinKit project
+         *  https://github.com/tobiasahlin/SpinKit
+         */
+        .sk-spinner-pulse {
+            width: 20px;
+            height: 20px;
+            margin: auto 10px;
+            float: left;
+            background-color: #333;
+            border-radius: 100%;
+            -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
+            animation: sk-pulseScaleOut 1s infinite ease-in-out;
+        }
+
+        @-webkit-keyframes sk-pulseScaleOut {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            100% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes sk-pulseScaleOut {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            100% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+
+        .spinner-text {
+            float: left;
+        }
+
+        body {
+            background-color: darkblue;
+        }
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <img id="face1.png" src="face1.png" style="display: none">
+    <img id="face2.png" src="face2.png" style="display: none">
+    <img id="face3.png" src="face3.png" style="display: none">
+    <img id="body1.png" src="body1.png" style="display: none">
+    <img id="armL1.png" src="armL1.png" style="display: none">
+    <img id="armR1.png" src="armR1.png" style="display: none">
+    <img id="armR.png" src="leftArm1.png" style="display: none">
+    <img id="rightFoot1.png" src="rightFoot1.png" style="display: none">
+    <img id="leftFoot1.png" src="leftFoot1.png" style="display: none">
+
+    <div id="info" style='display:none'>
+    </div>
+    <div id="loading" style='display:flex'>
+        <div class="spinner-text">
+            Loading PoseNet model...
+        </div>
+        <div class="sk-spinner sk-spinner-pulse"></div>
+    </div>
+    <div id='main' style='display:none'>
+        <video id="video" playsinline style=" -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        display: none;
+        ">
+        </video>
+        <canvas id="output" />
+    </div>
+
+    <!--    ライブラリを読み込む-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Kevnz/stats.js/build/stats.min.js"></script>
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+    <script src="demo_util.js"></script>
+    <script src="camera.js"></script>
+</body>
+
+</html>
